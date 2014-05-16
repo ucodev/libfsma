@@ -1,0 +1,63 @@
+1. Project name, Licensing and Documentation
+
+  1. Fast Scalable Memory Allocator Library (libfsma).
+
+  2. Home page: http://www.ucodev.org
+
+  3. Licensed under GNU Genral Public License version 3. Please read the
+     LICENSE file located at the project base directory.
+
+  4. Refer to header files at include/ directory for interface documentation.
+
+
+II. Compliance and Portability
+
+  1. POSIX.1-2001 and POSIX.1-2008 compliant.
+
+  2. Written in C programming language and should be compiled by C11 or C99
+     compliant compilers.
+
+
+III. Notes
+
+  1. Future versions will be compliant with Microsoft Windows operating systems.
+
+
+IV. Examples
+
+  1. EXPERIMENTAL: In order to override the libc allocators with the libfsma,
+     link your projects with -lfsma_libcor (libcor stands for LibC Override).
+
+  2. If your project isn't multi-threaded, link with -lfsma_st (Single Thread)
+
+  3. EXPERIMENTAL: You can also override libc allocators for single-threaded
+     projects by linking your project with -fsma_libcor_st
+
+  4. Linking your projects with -lfsma will require the use of the libfsma
+     API (fsma_malloc(), etc..) and respective header inclusion (fsma/fsma.h)
+
+  5. For other examples, check the example/ in the project root directory.
+
+
+V. Structures
+
+ - Memory Management Pool
+
+  +--------+--------+---------+---------+---------
+  | length |  next  | pool_1 | pool_2 | .....
+  +--------+--------+---------+---------+---------
+
+
+ - Pool
+
+  +---------+--------+----------+----------+----------
+  |  bfree  | length |  slot_1  |  slot_2  | .....
+  +---------+--------+----------+----------+----------
+
+ - Slot
+
+  +--------+--------+-------------
+  |  rank  | length | data ....
+  +--------+--------+-------------
+
+

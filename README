@@ -1,0 +1,23 @@
+1. About
+
+  Fast Scalable Memory Allocator Library (libfsma).
+  Developed by Pedro A. Hortas (pah@ucodev.org).
+  Home page: http://www.ucodev.org
+
+
+2. Version
+
+  $ cat VERSION
+
+
+3. Documentation
+
+  $ cat doc/overview.txt
+
+
+4. Build and Install
+
+  # ./do
+  # ./install
+
+
