@@ -4,18 +4,23 @@
   Developed by Pedro A. Hortas (pah@ucodev.org).
   Home page: http://www.ucodev.org
 
+2. Briefing
 
-2. Version
+  libfsma is a very, very fast and scalable implementation of malloc() / calloc() / realloc() / posix_memalign() / free().
+  It is thread-safe and uses thread local storage to grant scalability.
+
+
+3. Version
 
   $ cat VERSION
 
 
-3. Documentation
+4. Documentation
 
   $ cat doc/overview.txt
 
 
-4. Build and Install
+5. Build and Install
 
   # ./do
   # ./install
