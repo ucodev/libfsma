@@ -2,6 +2,7 @@
 
 make clean
 
-rm -f compiler
+rm -f .compiler
+rm -f .archflags
 rm -f .done
 
