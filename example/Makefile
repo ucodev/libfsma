@@ -1,9 +1,10 @@
-CC=`cat ../compiler`
+CC=`cat ../.compiler`
 CCFLAGS=-I../include/ -fstrict-aliasing -Wall -Werror
+ARCHFLAGS=`cat ../.archflags`
 LDFLAGS=../src/libfsma.so -s
 
 all:
-	${CC} ${CCFLAGS} -c eg_alloc.c
+	${CC} ${CCFLAGS} ${ARCHFLAGS} -c eg_alloc.c
 	${CC} -o eg_alloc eg_alloc.o ${LDFLAGS}
 
 clean:
