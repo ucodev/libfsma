@@ -3,6 +3,7 @@
 make clean
 
 rm -f .compiler
+rm -f .target
 rm -f .archflags
 rm -f .done
 
