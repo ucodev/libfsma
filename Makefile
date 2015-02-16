@@ -1,8 +1,8 @@
 all:
-	make -C src/
-	make -C example/
+	cd src && make && cd ..
+	cd example && make && cd ..
 
 clean:
-	make -C src/ clean
-	make -C example/ clean
+	cd src && make clean && cd ..
+	cd example && make clean && cd ..
 
