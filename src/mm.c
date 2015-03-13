@@ -3,7 +3,7 @@
  * @brief Fast Scalable Memory Allocator Library (libfsma)
  *        Memory Management Interface
  *
- * Date: 21-06-2013
+ * Date: 13-03-2015
  * 
  * Copyright 2013 Pedro A. Hortas (pah@ucodev.org)
  *
@@ -29,7 +29,14 @@
 #include <stdint.h>
 #include <string.h>
 #include <errno.h>
-#include <pthread.h>
+
+#ifndef LIBFSMA_NO_THREADS
+ #include <pthread.h>
+#else
+ #ifdef _REENTRANT
+  #undef _REENTRANT
+ #endif
+#endif
 
 #include "mm.h"
 
