@@ -3,9 +3,9 @@
  * @brief Fast Scalable Memory Allocator Library (libfsma)
  *        Memory Management Interface
  *
- * Date: 13-03-2015
+ * Date: 25-03-2015
  * 
- * Copyright 2013 Pedro A. Hortas (pah@ucodev.org)
+ * Copyright 2013-2015 Pedro A. Hortas (pah@ucodev.org)
  *
  * This file is part of libfsma.
  *
@@ -81,7 +81,7 @@ static void *_mm_map_init(void) {
 		pthread_mutex_unlock(&_mm_map_tmutex);
 #endif
 
-		if ((mm_pool = _map((MM_POOL_INIT_ELEMS + 2) * sizeof(size_t))) == (void *) -1)
+		if ((mm_pool = (char **) _map((MM_POOL_INIT_ELEMS + 2) * sizeof(size_t))) == (void *) -1)
 			return NULL;
 
 		memcpy(mm_pool, (size_t [1]) { MM_POOL_INIT_ELEMS }, sizeof(size_t));
@@ -227,7 +227,7 @@ static void *_mm_map_change_pool(size_t size, char *cur_pool) {
 
 	mm_pool_elems <<= 1;
 
-	if ((mm_pool_tmp = _map((mm_pool_elems + 2) * sizeof(size_t))) == (void *) -1)
+	if ((mm_pool_tmp = (char **) _map((mm_pool_elems + 2) * sizeof(size_t))) == (void *) -1)
 		return NULL;
 
 	memcpy(mm_pool_tmp, &mm_pool_elems, sizeof(size_t));
