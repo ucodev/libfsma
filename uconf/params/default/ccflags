@@ -1,0 +1,1 @@
+-fPIC -O3 -fstrict-aliasing -Wall -Wextra -Werror -pedantic -g

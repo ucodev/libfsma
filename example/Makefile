@@ -1,7 +1,7 @@
 CC=`cat ../.compiler`
 CCFLAGS=-I../include/ -fstrict-aliasing -Wall -Werror
 ARCHFLAGS=`cat ../.archflags`
-LDFLAGS=../src/libfsma.so -s
+LDFLAGS=../src/libfsma.`cat ../.extlib` -s
 
 all:
 	${CC} ${CCFLAGS} ${ARCHFLAGS} -c eg_alloc.c

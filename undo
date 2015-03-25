@@ -1,13 +1,1 @@
-#!/bin/sh
-
-make clean
-
-rm -f .compiler
-rm -f .ecflags
-rm -f .ecflags_st
-rm -f .elflags
-rm -f .elflags_st
-rm -f .target
-rm -f .archflags
-rm -f .done
-
+uconf/bin/undo
