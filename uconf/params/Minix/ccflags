@@ -1,1 +1,1 @@
--D_REENTRANT -fstack-protector-all -Wstack-protector
+-I/usr/pkg/include -D_REENTRANT -fstack-protector-all -Wstack-protector
