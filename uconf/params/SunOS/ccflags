@@ -1,1 +1,1 @@
--std=c99 -D_REENTRANT
+-std=c99 -D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS -Wno-missing-braces
