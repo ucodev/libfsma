@@ -44,7 +44,7 @@ V. Structures
  - Memory Management Pool
 
   +--------+--------+---------+---------+---------
-  | length |  next  | pool_1 | pool_2 | .....
+  | length |  next  | pool_1  | pool_2  | .....
   +--------+--------+---------+---------+---------
 
 
